@@ -1,3 +1,6 @@
+html {
+cursor: url(../img/mata_mosca.png) 30 30, auto;
+}
 body {
     background: #ff33 url(../img/bg.jpg) no-repeat;
     background-size: 100%;

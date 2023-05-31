@@ -3,28 +3,50 @@
     
     <head>
         <meta charset="utf-8" lang="pt-br">
-        <title></title>
-        <link rel="stylesheet" href="css/estilo.css"> 
-        <script src="js/jogo.js">
-            
-        </script>
-    </head>
-    <body onresize="ajustaJogo()">
-        <div class="painel">
-            <div class="vidas">
-                <img id="v1" src="img/coracao_cheio.png">
-                <img id="v2" src="img/coracao_cheio.png">
-                <img id="v3" src="img/coracao_cheio.png">
-            </div>
-            <div class="cronometro">
-                Tempo restante: 
-            </div>
-
-        </div>
+        <title>Jogo Mata Mosquito</title>
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
         <script>
-            setInterval(function() {
-                 posicaoRandomica()
-            }, 1000)
+            function iniciarJogo (){
+                let nivel = document.getElementById('nivel').value
+                window.location.href = "jogo.html?" + nivel
+            }
         </script>
+            
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center" class="img-fluid">
+                        <img src="img/game.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center" class="img-fluid">
+                        <div class="mb-2">
+                            <select class="form-control"  id="nivel">
+                                <option value="" disabled>--Nivel do jogo--</option>
+                                <option value="facil">Fácil</option>
+                                <option value="normal">Normal</option>
+                                <option value="dificil">Difícil</option>
+                                <option value="lendario">Lendario</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center" class="img-fluid">
+                        <button type="button" class="btn btn-dark btn-lg" onclick="iniciarJogo()"> Começar o jogo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </body>
 </html>
