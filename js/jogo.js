@@ -16,10 +16,23 @@ function posicaoRandomica(){
 
     let mosquito = document.createElement('img')
     mosquito.src = 'img/mosca.png'
-    mosquito.className = 'mosquito1'
+    mosquito.className = TamanhoAleatorio()
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
 
     document.body.appendChild(mosquito)
+    TamanhoAleatorio()
+}
+function TamanhoAleatorio (){
+    let classe = Math.floor(Math.random() * 3)
+    switch(classe){
+        case 0:
+            return 'mosquito0'
+        case 1:
+            return 'mosquito1'
+        case 2:
+            return 'mosquito2'
+    }
+    
 }
